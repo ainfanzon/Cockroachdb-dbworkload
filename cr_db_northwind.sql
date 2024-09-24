@@ -1,0 +1,19 @@
+
+-- CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION alex;
+
+CREATE DATABASE IF NOT EXISTS northwind;
+
+CREATE USER alex;
+
+GRANT ALL PRIVILEGES ON DATABASE northwind TO alex;
+GRANT ALL PRIVILEGES ON DATABASE test1 TO alex;
+
+GRANT SYSTEM EXTERNALIOIMPLICITACCESS TO alex;
+
+SHOW GRANTS ON DATABASE test1;
+SHOW GRANTS ON DATABASE northwind;	
+
+-- DROP TYPE public."crdb_internal_region";
+
+-- CREATE TYPE public."crdb_internal_region" AS ENUM (
+--	'aws-us-west-2');
