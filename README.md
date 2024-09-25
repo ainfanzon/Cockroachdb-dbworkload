@@ -77,8 +77,9 @@ and execute the **dbworklod** command:
 
 Use the following command to create the **northwind** database and the tables:
 
-<code>% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file northwind.sql</code>
+<code>% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file ./Cockroachdb-dbworkload/sql/cr_db_northwind.sql</code>
+<code>% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database northwind --insecure --file ./Cockroachdb-dbworkload/sql/crdb_northwind.sql</code>
 
- Once the database has been created, use **sbworkload** to generate an intermediate representation of what needs to be generated - a definition file - in YAML syntax.
+Once the database has been created, use **sbworkload** to generate an intermediate representation of what needs to be generated - a definition file - in YAML syntax.
 
- <code>% dbworkload util yaml --input northwind.sql -o northwind.yaml</>
+ <code>% dbworkload util yaml --input northwind.sql -o northwind.yaml</code>
