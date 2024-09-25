@@ -71,7 +71,9 @@ and execute the **dbworklod** command:
 
 ### Step 0: Launch a CRDB insstance and clone the repository
 
-<code>% git clone https://github.com/ainfanzon/Cockroachdb-dbworkload</clode>
+Start a CRDB cluster and copy the github repository in the directory where the **dbworkload** virtual environment was created.
+
+<code>% git clone https://github.com/ainfanzon/Cockroachdb-dbworkload</code>
 
 ### Step 1: Create the northwind database
 
