@@ -67,11 +67,17 @@ and execute the **dbworklod** command:
 <br>
  GitHub: <https://github.com/fabiog1901/dbworkload></code>
 
- ## Using 3 node CRDB cluster on localhost.
+## Using 3 node CRDB cluster on localhost.
 
- Use the following command to create the **northwind** database and the tables:
+### Step 0: Launch a CRDB insstance and clone the repository
 
- <code>% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file northwind.sql</code>
+<code>% git clone https://github.com/ainfanzon/Cockroachdb-dbworkload</clode>
+
+### Step 1: Create the northwind database
+
+Use the following command to create the **northwind** database and the tables:
+
+<code>% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file northwind.sql</code>
 
  Once the database has been created, use **sbworkload** to generate an intermediate representation of what needs to be generated - a definition file - in YAML syntax.
 
