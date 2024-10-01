@@ -1,0 +1,810 @@
+customer_customer_demo:
+- count: 5
+  sort-by: [customer_id]
+  columns:
+    customer_id:
+      type: sequence
+      args:
+        start: 12001
+    customer_type_id:
+      type: integer
+      args:
+        min: 1
+        max: 5
+        prefix: 'D-'
+        seed: 0
+        null_pct: 0.0
+        array: 0
+customer_demographics:
+- count: 5
+  sort-by: [customer_type_id]
+  columns:
+    customer_type_id:
+      type: integer
+      args:
+        min: 1
+        max: 5
+        prefix: 'D-'
+        seed: 0
+        null_pct: 0.0
+        array: 0
+    customer_desc:
+      type: string
+      args:
+        min: 10
+        max: 30
+        value: simplefaker
+customers:
+- count: 100
+  sort-by: [customer_id]
+  columns:
+    customer_id:
+      type: sequence
+      args:
+        start: 12001
+        null_pct: 0.0
+        array: 0
+    company_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.740781288644057
+        null_pct: 0.0
+        array: 0
+    contact_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6622783731490568
+        null_pct: 0.29
+        array: 0
+    contact_title:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.3597704875210025
+        null_pct: 0.22
+        array: 0
+    address:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.21828052082346439
+        null_pct: 0.29
+        array: 0
+    city:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.15771569108976513
+        null_pct: 0.25
+        array: 0
+    region:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.03317688246741479
+        null_pct: 0.25
+        array: 0
+    postal_code:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.9387157754592864
+        null_pct: 0.21
+        array: 0
+    country:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.7341899684942841
+        null_pct: 0.24
+        array: 0
+    phone:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6141219623882105
+        null_pct: 0.29
+        array: 0
+    fax:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8502067510397822
+        null_pct: 0.37
+        array: 0
+employees:
+- count: 10
+  sort-by: []
+  columns:
+    employee_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.16670693827759486
+        null_pct: 0.0
+        array: 0
+    last_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.5057985608554326
+        null_pct: 0.0
+        array: 0
+    first_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.18097665868076773
+        null_pct: 0.0
+        array: 0
+    title:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.155186176434586
+        null_pct: 0.27
+        array: 0
+    title_of_courtesy:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.30852518432461684
+        null_pct: 0.24
+        array: 0
+    birth_date:
+      type: date
+      args:
+        start: '2000-01-01'
+        end: '2024-12-31'
+        format: '%Y-%m-%d'
+        seed: 0.8566030113929622
+        null_pct: 0.34
+        array: 0
+    hire_date:
+      type: date
+      args:
+        start: '2000-01-01'
+        end: '2024-12-31'
+        format: '%Y-%m-%d'
+        seed: 0.5087049187685082
+        null_pct: 0.38
+        array: 0
+    address:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.3022662159147609
+        null_pct: 0.33
+        array: 0
+    city:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8029640712260883
+        null_pct: 0.36
+        array: 0
+    region:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.09712622111865732
+        null_pct: 0.33
+        array: 0
+    postal_code:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6679413257998554
+        null_pct: 0.28
+        array: 0
+    country:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.24042220766064892
+        null_pct: 0.36
+        array: 0
+    home_phone:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.1501719640839856
+        null_pct: 0.26
+        array: 0
+    extension:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8215193138238159
+        null_pct: 0.2
+        array: 0
+    photo:
+      type: bytes
+      args:
+        size: 20
+        seed: 0.003509046677826033
+        null_pct: 0.3
+        array: 0
+    notes:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.24132103968087082
+        null_pct: 0.24
+        array: 0
+    reports_to:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.6046160491650627
+        null_pct: 0.28
+        array: 0
+    photo_path:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8833295967852204
+        null_pct: 0.28
+        array: 0
+employee_territories:
+- count: 50
+  sort-by: []
+  columns:
+    employee_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.739564183685159
+        null_pct: 0.0
+        array: 0
+    territory_id:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.2345818862775918
+        null_pct: 0.0
+        array: 0
+order_details:
+- count: 100
+  sort-by: []
+  columns:
+    order_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.8113979769660828
+        null_pct: 0.0
+        array: 0
+    product_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.26058985982824767
+        null_pct: 0.0
+        array: 0
+    unit_price:
+      type: float
+      args:
+        min: 0
+        max: 10000000
+        round: 2
+        seed: 0.4778223102869231
+        null_pct: 0.0
+        array: 0
+    quantity:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.446629635617088
+        null_pct: 0.0
+        array: 0
+    discount:
+      type: float
+      args:
+        min: 0
+        max: 10000000
+        round: 2
+        seed: 0.8115531524400982
+        null_pct: 0.0
+        array: 0
+orders:
+- count: 1000
+  sort-by: []
+  columns:
+    order_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.01200478769710911
+        null_pct: 0.0
+        array: 0
+    customer_id:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.35757681441683387
+        null_pct: 0.27
+        array: 0
+    employee_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.23234614571954482
+        null_pct: 0.23
+        array: 0
+    order_date:
+      type: date
+      args:
+        start: '2000-01-01'
+        end: '2024-12-31'
+        format: '%Y-%m-%d'
+        seed: 0.8192613184885403
+        null_pct: 0.39
+        array: 0
+    required_date:
+      type: date
+      args:
+        start: '2000-01-01'
+        end: '2024-12-31'
+        format: '%Y-%m-%d'
+        seed: 0.4872475564821106
+        null_pct: 0.32
+        array: 0
+    shipped_date:
+      type: date
+      args:
+        start: '2000-01-01'
+        end: '2024-12-31'
+        format: '%Y-%m-%d'
+        seed: 0.9836527641036047
+        null_pct: 0.34
+        array: 0
+    ship_via:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.779108751164915
+        null_pct: 0.3
+        array: 0
+    freight:
+      type: float
+      args:
+        min: 0
+        max: 10000000
+        round: 2
+        seed: 0.26600910696774016
+        null_pct: 0.24
+        array: 0
+    ship_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8163751420817145
+        null_pct: 0.23
+        array: 0
+    ship_address:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.14218914522626658
+        null_pct: 0.31
+        array: 0
+    ship_city:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.45556911292248714
+        null_pct: 0.28
+        array: 0
+    ship_region:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.7175983771058653
+        null_pct: 0.3
+        array: 0
+    ship_postal_code:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6397103861327684
+        null_pct: 0.28
+        array: 0
+    ship_country:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.2408451203333849
+        null_pct: 0.3
+        array: 0
+products:
+- count: 100
+  sort-by: []
+  columns:
+    product_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.3931717971348452
+        null_pct: 0.0
+        array: 0
+    product_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.48150682279762325
+        null_pct: 0.0
+        array: 0
+    supplier_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.04739648525613904
+        null_pct: 0.31
+        array: 0
+    category_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.028901006484479907
+        null_pct: 0.39
+        array: 0
+    quantity_per_unit:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.5930312997464459
+        null_pct: 0.26
+        array: 0
+    unit_price:
+      type: float
+      args:
+        min: 0
+        max: 10000000
+        round: 2
+        seed: 0.5511633450050174
+        null_pct: 0.25
+        array: 0
+    units_in_stock:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.5101496707919193
+        null_pct: 0.23
+        array: 0
+    units_on_order:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.025834549618461544
+        null_pct: 0.2
+        array: 0
+    reorder_level:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.3235031308350581
+        null_pct: 0.28
+        array: 0
+    discontinued:
+      type: integer
+      args:
+        min: -9223372036854775807
+        max: 9223372036854775807
+        seed: 0.543607150673314
+        null_pct: 0.0
+        array: 0
+region:
+- count: 4
+  sort-by: []
+  columns:
+    region_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.9212752021202604
+        null_pct: 0.0
+        array: 0
+    region_description:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6284303727000811
+        null_pct: 0.0
+        array: 0
+shippers:
+- count: 10
+  sort-by: []
+  columns:
+    shipper_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.5063825323823709
+        null_pct: 0.0
+        array: 0
+    company_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.14416515367459692
+        null_pct: 0.0
+        array: 0
+    phone:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.08050584550904205
+        null_pct: 0.31
+        array: 0
+suppliers:
+- count: 30
+  sort-by: []
+  columns:
+    supplier_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.02296659338779672
+        null_pct: 0.0
+        array: 0
+    company_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.5637073569038865
+        null_pct: 0.0
+        array: 0
+    contact_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.5294040107741835
+        null_pct: 0.32
+        array: 0
+    contact_title:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.43749820693710384
+        null_pct: 0.2
+        array: 0
+    address:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.2824075048146666
+        null_pct: 0.36
+        array: 0
+    city:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.9833495303243678
+        null_pct: 0.39
+        array: 0
+    region:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.22079565630444942
+        null_pct: 0.3
+        array: 0
+    postal_code:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.20433548308704952
+        null_pct: 0.27
+        array: 0
+    country:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.9379575180314889
+        null_pct: 0.3
+        array: 0
+    phone:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.701008194310227
+        null_pct: 0.3
+        array: 0
+    fax:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.3759146594794208
+        null_pct: 0.28
+        array: 0
+    homepage:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.5101946398657751
+        null_pct: 0.39
+        array: 0
+territories:
+- count: 60
+  sort-by: []
+  columns:
+    territory_id:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.1473215191824705
+        null_pct: 0.0
+        array: 0
+    territory_description:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8760849155964704
+        null_pct: 0.0
+        array: 0
+    region_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.0038320674366142393
+        null_pct: 0.0
+        array: 0
+us_states:
+- count: 51
+  sort-by: []
+  columns:
+    state_id:
+      type: integer
+      args:
+        min: -32767
+        max: 32767
+        seed: 0.9342752889505884
+        null_pct: 0.0
+        array: 0
+    state_name:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.6777728358460771
+        null_pct: 0.4
+        array: 0
+    state_abbr:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8972654520932065
+        null_pct: 0.29
+        array: 0
+    state_region:
+      type: string
+      args:
+        min: 10
+        max: 30
+        prefix: ''
+        seed: 0.8386475064966206
+        null_pct: 0.28
+        array: 0
