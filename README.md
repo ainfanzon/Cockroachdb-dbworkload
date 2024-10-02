@@ -79,24 +79,27 @@ Start a CRDB cluster and execute the following steps to create the **northwind**
 
 Open a new terminal then start a simple python server:
 
-<code>cd <DOWNLOAD DIR>/Cockroachdb-dbworkload/data<br>
-&nbsp;python3 -m http.server 3000
-</code>
+```
+cd <DOWNLOAD DIR>/Cockroachdb-dbworkload/data<br>
+python3 -m http.server 3000
+```
 
 ### Step 2: Create database and populate the tables
 
 Execute the sql script to create and populate the tables.
 
-<code>
-% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file <DOWNLOAD DIR>/Cockroachdb-dbworkload/crdb_northwind.sql</code>
+```
+% cockroach sql --url "postgres://root@localhost:26257/defaultdb?sslmode=disable" --user root --database defaultdb --insecure --file <DOWNLOAD DIR>/Cockroachdb-dbworkload/crdb_northwind.sql
+```
 
 ### Step 3: Execute the workload
 
 Execute the Python class with the test workload
 
-<code>
+```
 %  dbworkload run -w northwind.py -s -c 4 --uri 'postgres://root@localhost:26257/northwind?sslmode=disable' -d 120 -i 100000
-</code>
+```
+
 
 |     |    |
 |-------------|-------------------------|
@@ -128,10 +131,9 @@ Execute the Python class with the test workload
 
 Produce a plot:
 
-<code>
+```
 % dbworkload util plot -i Northwind.20241001_195957.csv
-</code>
-<br>
+```
 
 ![image info](./Northwind_Plot.png)
 
