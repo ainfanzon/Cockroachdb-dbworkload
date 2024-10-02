@@ -68,7 +68,7 @@ See GitHub: <https://github.com/fabiog1901/dbworkload></code> for the installati
 The repository can be found in the below GitHub page:
 
 <code>
-% git clone <https://github.com/ainfanzon/Cockroachdb-dbworkload>
+% git clone \<https://github.com/ainfanzon/Cockroachdb-dbworkload>
 </code>
 
 ## Deploy in localhost.
